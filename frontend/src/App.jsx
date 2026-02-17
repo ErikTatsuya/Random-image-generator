@@ -13,9 +13,18 @@ function App() {
 
 	return (
 		<div className="App">
-			<div className="main-container">
-				<h1>Images</h1>
-				<button onClick={fetchFiles}>Fetch Files</button>
+			<div className="content">
+				<div className="container">
+					<h1>Images</h1>
+					<button onClick={fetchFiles}>Fetch Files</button>
+				</div>
+				<div className="container">
+					{files.map((file) => (
+						<div key={file} className="file">
+							<p>{file}</p>
+						</div>
+					))}
+				</div>
 			</div>
 		</div>
 	);
