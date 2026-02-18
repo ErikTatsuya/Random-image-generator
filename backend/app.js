@@ -32,7 +32,7 @@ app.get("/getAllFiles", async (req, res) => {
 	});
 });
 
-app.use("/myFiles/", express.static("./images/"));
+app.use("/getImageByName/", express.static("./images/"));
 
 app.get("/generateImages/:x/:y/:quantity/:extension", async (req, res) => {
 	const { x, y, quantity, extension } = req.params;
