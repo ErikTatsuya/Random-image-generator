@@ -11,7 +11,12 @@ def generateIMG(x, y, quantity, extension):
 
         for j in range(x):
             for k in range(y):
-                colors = ["black", "red", "green", "blue", "yellow", "cyan", "magenta"]
+                colors = [
+                    "black",
+                    "white",
+                    "blue",
+                    "red",
+                ]
                 draw.point((j, k), fill=random.choice(colors))
 
         with open("index.txt", mode="r") as file:
